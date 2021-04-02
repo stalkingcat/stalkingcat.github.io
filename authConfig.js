@@ -7,7 +7,7 @@ const msalConfig = {
     auth: {
         clientId: "032939c0-9d6e-49d9-bb33-b5004ca4e615",
         authority: "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47",
-        redirectUri: "https://stalkingcat.github.io/",
+        redirectUri: "http://localhost:3000",
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
@@ -53,6 +53,6 @@ const loginRequest = {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
  */
 const tokenRequest = {
-    scopes: ["User.Read", "Mail.Read"],
+    scopes: ["User.Read", "User.ReadBasic.All"],
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
 };

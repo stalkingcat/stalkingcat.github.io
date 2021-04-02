@@ -35,7 +35,7 @@ function updateUI(data, endpoint) {
 
     } else if (endpoint === graphConfig.graphMailEndpoint) {
         if (data.value.length < 1) {
-            alert("Your mailbox is empty!")
+            alert("No Scotts found");
         } else {
             const tabContent = document.getElementById("nav-tabContent");
             const tabList = document.getElementById("list-tab");
@@ -51,7 +51,7 @@ function updateUI(data, endpoint) {
                     listItem.setAttribute("href", "#list" + i)
                     listItem.setAttribute("role", "tab")
                     listItem.setAttribute("aria-controls", i)
-                    listItem.innerHTML = d.subject;
+                    listItem.innerHTML = d.mail;
                     tabList.appendChild(listItem)
 
                     const contentItem = document.createElement("div");
@@ -59,7 +59,7 @@ function updateUI(data, endpoint) {
                     contentItem.setAttribute("id", "list" + i)
                     contentItem.setAttribute("role", "tabpanel")
                     contentItem.setAttribute("aria-labelledby", "list" + i + "list")
-                    contentItem.innerHTML = "<strong> from: " + d.from.emailAddress.address + "</strong><br><br>" + d.bodyPreview + "...";
+                    contentItem.innerHTML = "<strong> UPN: </strong>" + d.userPrincipalName ;
                     tabContent.appendChild(contentItem);
                 }
             });
