@@ -7,7 +7,7 @@ const msalConfig = {
     auth: {
         clientId: "032939c0-9d6e-49d9-bb33-b5004ca4e615",
         authority: "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47",
-        redirectUri: "http://localhost:3000",
+        redirectUri: "https://stalkingcat.github.io/",
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
