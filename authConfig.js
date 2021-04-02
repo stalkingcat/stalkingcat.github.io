@@ -46,7 +46,7 @@ const graphConfig = {
 
 // Add here scopes for access token to be used at MS Graph API endpoints.
 const tokenRequest = {
-    scopes: ["https://msidlab0.spoppe.com/User.Read"],
+    scopes: ["https://graph.microsoft.com/email"],
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
 };
 
